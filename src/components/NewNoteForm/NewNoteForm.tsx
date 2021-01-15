@@ -12,7 +12,9 @@ const NewNoteForm = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    dispatch(addNote({ id: uuid(), title, text }));
+    dispatch(
+      addNote({ id: uuid(), title, timestamp: Date.now() / 1000, text })
+    );
     setText('');
     setTitle('');
   };

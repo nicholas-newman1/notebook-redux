@@ -16,6 +16,7 @@ const NotesList = () => {
       {notes.map((note) => (
         <li key={note.id} id={note.id}>
           <h1>{note.title}</h1>
+          <p>{new Date(note.timestamp * 1000).toLocaleDateString()}</p>
           <button onClick={handleDelete}>Delete</button>
         </li>
       ))}

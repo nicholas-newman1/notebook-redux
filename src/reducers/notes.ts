@@ -12,6 +12,7 @@ const noteReducer = (state = initialState, action: NoteActionTypes) => {
         {
           id: action.payload.id,
           title: action.payload.title,
+          timestamp: action.payload.timestamp,
           text: action.payload.text,
         },
       ];
