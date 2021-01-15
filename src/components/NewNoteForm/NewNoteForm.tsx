@@ -12,9 +12,9 @@ const NewNoteForm = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     dispatch(addNote({ id: uuid(), title, text }));
     setText('');
+    setTitle('');
   };
 
   return (
