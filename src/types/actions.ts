@@ -6,7 +6,7 @@ export const UPDATE_NOTE = 'UPDATE_NOTE';
 
 export interface AddNoteAction {
   type: typeof ADD_NOTE;
-  payload: string;
+  payload: Note;
 }
 export interface DeleteNoteAction {
   type: typeof DELETE_NOTE;

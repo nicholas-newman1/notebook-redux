@@ -5,9 +5,9 @@ import {
 } from '../types/actions';
 import { Note } from '../types/Note';
 
-export const addNote = (text: string): AddNoteAction => ({
+export const addNote = (note: Note): AddNoteAction => ({
   type: 'ADD_NOTE',
-  payload: text,
+  payload: note,
 });
 
 export const deleteNote = (id: string): DeleteNoteAction => ({

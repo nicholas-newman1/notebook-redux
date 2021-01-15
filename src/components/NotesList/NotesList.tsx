@@ -8,7 +8,7 @@ const NotesList = () => {
     <ul>
       {notes.map((note) => (
         <li>
-          <h1>Note:</h1>
+          <h1>{note.title}</h1>
           <p>{note.text}</p>
         </li>
       ))}
