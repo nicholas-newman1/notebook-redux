@@ -1,5 +1,5 @@
 import Header from './components/Header/Header';
-import NotesList from './components/NotesList/NotesList';
+import NotesList from './components/NotesList/NoteList';
 
 const App: React.FC = () => {
   return (
