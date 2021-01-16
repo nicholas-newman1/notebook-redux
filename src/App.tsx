@@ -5,7 +5,11 @@ const App: React.FC = () => {
   return (
     <div>
       <Header />
-      <NotesList />
+      <main className='main'>
+        <div className='container'>
+          <NotesList />
+        </div>
+      </main>
     </div>
   );
 };
