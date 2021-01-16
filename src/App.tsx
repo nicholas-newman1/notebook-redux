@@ -1,13 +1,13 @@
 import Header from './components/Header/Header';
 import NotesList from './components/NotesList/NotesList';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div>
       <Header />
       <NotesList />
     </div>
   );
-}
+};
 
 export default App;

@@ -2,7 +2,7 @@ import Hamburger from '../Hamburger/Hamburger';
 import SearchIcon from '../SearchIcon/SearchIcon';
 import './header.scss';
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <header className='header'>
       <div className='header__container container'>

@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { AppState } from '../../reducers';
 import NoteListItem from '../NoteListItem/NoteListItem';
 
-const NotesList = () => {
+const NotesList: React.FC = () => {
   const notes = useSelector((state: AppState) => state.notes);
 
   return (

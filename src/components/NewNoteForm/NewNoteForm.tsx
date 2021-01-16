@@ -4,7 +4,7 @@ import { addNote } from '../../actions/notes';
 import { v4 as uuid } from 'uuid';
 import './newNoteForm.scss';
 
-const NewNoteForm = () => {
+const NewNoteForm: React.FC = () => {
   const [title, setTitle] = useState('');
   const [text, setText] = useState('');
 
