@@ -12,7 +12,7 @@ const NoteListItem: React.FC<Props> = ({ note }) => {
   const dispatch = useDispatch();
 
   const handleDelete = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const btn = e.target as HTMLButtonElement;
+    const btn = e.currentTarget as HTMLButtonElement;
     dispatch(deleteNote(btn.parentElement!.id));
   };
 
