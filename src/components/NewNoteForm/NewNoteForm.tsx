@@ -3,20 +3,21 @@ import { useDispatch } from 'react-redux';
 import { addNote } from '../../actions/notes';
 import { v4 as uuid } from 'uuid';
 import './newNoteForm.scss';
+import { useHistory } from 'react-router-dom';
 
 const NewNoteForm: React.FC = () => {
   const [title, setTitle] = useState('');
   const [text, setText] = useState('');
 
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     dispatch(
       addNote({ id: uuid(), title, timestamp: Date.now() / 1000, text })
     );
-    setText('');
-    setTitle('');
+    history.push('/');
   };
 
   return (
