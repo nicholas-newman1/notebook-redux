@@ -1,1 +1,48 @@
+@use '../../scss/config.scss' as *;
 
+.new-note-form {
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+
+  &__input {
+    border: none;
+    padding: 1rem;
+    outline: none;
+    border-radius: 15px;
+    @include box-shadow();
+  }
+
+  &__input--title {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  &__input--text {
+    resize: vertical;
+    min-height: 20rem;
+    font-size: 1rem;
+  }
+
+  &__submit {
+    justify-self: center;
+    padding: 0.5em 1.5em;
+    border: none;
+    outline: none;
+    background: $color1;
+    color: white;
+    font-size: 1rem;
+    border-radius: 1000px;
+    transition: background-color 300ms;
+    @include box-shadow();
+
+    &:hover {
+      cursor: pointer;
+      background-color: darken($color1, 20);
+    }
+
+    &:focus {
+      background-color: darken($color1, 20);
+    }
+  }
+}

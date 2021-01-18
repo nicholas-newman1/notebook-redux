@@ -1,3 +1,5 @@
+$color1: #ff3030;
+
 @mixin box-shadow() {
-  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
 }

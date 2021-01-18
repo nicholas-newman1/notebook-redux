@@ -35,7 +35,7 @@ const NewNoteForm: React.FC = () => {
         onChange={(e) => setText(e.target.value)}
       />
       <button className='new-note-form__submit' type='submit'>
-        Add Note
+        Save
       </button>
     </form>
   );
