@@ -1,28 +1,7 @@
 import { NoteActionTypes } from '../types/actions';
 import { Note } from '../types/Note';
 
-const initialState: Note[] = [
-  {
-    id: '7f3d9597-9dff-4e90-a40f-28ccca85bbf1',
-    title: 'Note 1',
-    timestamp: 1610823442.041,
-    text: 'wadwadwad',
-  },
-
-  {
-    id: '626160c7-d97d-4a14-be70-83910af50657',
-    title: 'Note 2',
-    timestamp: 1610823446.986,
-    text: 'wadwadwa',
-  },
-
-  {
-    id: '9c953887-5850-4741-b7eb-7401394f0bf4',
-    title: 'Note 3',
-    timestamp: 1610823451.207,
-    text: 'awdwadwa',
-  },
-];
+const initialState: Note[] = [];
 
 const noteReducer = (state = initialState, action: NoteActionTypes) => {
   const newState = [...state];
