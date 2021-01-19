@@ -1,0 +1,69 @@
+@use '../../scss/config.scss' as *;
+
+.edit-note-form {
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+
+  &__input {
+    border: none;
+    padding: 1rem;
+    outline: none;
+    border-radius: 15px;
+    @include box-shadow();
+  }
+
+  &__input--title {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  &__input--text {
+    resize: vertical;
+    min-height: 20rem;
+    font-size: 1rem;
+  }
+
+  &__btns {
+    justify-self: center;
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__btn {
+    padding: 0.5em 1.5em;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 1000px;
+    transition: background-color 300ms;
+    @include box-shadow();
+
+    &--submit {
+      background: $color1;
+
+      &:hover {
+        cursor: pointer;
+        background-color: darken($color1, 20);
+      }
+
+      &:focus {
+        background-color: darken($color1, 20);
+      }
+    }
+
+    &--cancel {
+      background: #666;
+
+      &:hover {
+        cursor: pointer;
+        background-color: darken(#666, 10);
+      }
+
+      &:focus {
+        background-color: darken(#666, 20);
+      }
+    }
+  }
+}

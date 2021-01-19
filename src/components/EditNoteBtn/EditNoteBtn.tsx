@@ -8,7 +8,7 @@ interface Props {
 
 const EditNoteBtn: React.FC<Props> = ({ id }) => {
   return (
-    <Link to={`/new-note/${id}`} className='edit-note-btn'>
+    <Link to={`/edit-note/${id}`} className='edit-note-btn'>
       <img className='edit-note-btn__svg' src={plusSVG} alt='menu icon' />
     </Link>
   );

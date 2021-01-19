@@ -1,4 +1,5 @@
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import EditNoteForm from './components/EditNoteForm/EditNoteForm';
 import Header from './components/Header/Header';
 import NewNoteBtn from './components/NewNoteBtn/NewNoteBtn';
 import NewNoteForm from './components/NewNoteForm/NewNoteForm';
@@ -17,6 +18,7 @@ const App: React.FC = () => {
               <NewNoteBtn />
             </Route>
             <Route exact path='/new-note' component={NewNoteForm} />
+            <Route exact path='/edit-note/:id' component={EditNoteForm} />
             <Route exact path='/notes/:id' component={ViewNote} />
           </Switch>
         </div>

@@ -44,6 +44,7 @@ const noteReducer = (state = initialState, action: NoteActionTypes) => {
         if (note.id !== action.payload.id) return note;
         note.title = action.payload.title;
         note.text = action.payload.text;
+        note.timestamp = action.payload.timestamp;
         return note;
       });
     default:
