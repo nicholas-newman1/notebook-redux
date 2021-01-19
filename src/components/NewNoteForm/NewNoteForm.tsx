@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react';
+import { FormEvent, MouseEvent, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addNote } from '../../actions/notes';
 import { v4 as uuid } from 'uuid';
@@ -20,6 +20,10 @@ const NewNoteForm: React.FC = () => {
     history.push('/');
   };
 
+  const handleCancel = (e: MouseEvent<HTMLButtonElement>) => {
+    history.push('/');
+  };
+
   return (
     <form className='new-note-form' onSubmit={handleSubmit}>
       <input
@@ -34,9 +38,21 @@ const NewNoteForm: React.FC = () => {
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <button className='new-note-form__submit' type='submit'>
-        Save
-      </button>
+      <div className='new-note-form__btns'>
+        <button
+          className='new-note-form__btn new-note-form__btn--cancel'
+          type='button'
+          onClick={handleCancel}
+        >
+          Cancel
+        </button>
+        <button
+          className='new-note-form__btn new-note-form__btn--submit'
+          type='submit'
+        >
+          Save
+        </button>
+      </div>
     </form>
   );
 };

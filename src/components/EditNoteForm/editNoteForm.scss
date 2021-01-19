@@ -58,11 +58,11 @@
 
       &:hover {
         cursor: pointer;
-        background-color: darken(#666, 10);
+        background-color: darken($color2, 10);
       }
 
       &:focus {
-        background-color: darken(#666, 20);
+        background-color: darken($color2, 20);
       }
     }
   }

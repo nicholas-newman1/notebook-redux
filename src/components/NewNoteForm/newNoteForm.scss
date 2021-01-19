@@ -24,25 +24,46 @@
     font-size: 1rem;
   }
 
-  &__submit {
+  &__btns {
     justify-self: center;
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__btn {
     padding: 0.5em 1.5em;
     border: none;
     outline: none;
-    background: $color1;
     color: white;
     font-size: 1rem;
     border-radius: 1000px;
     transition: background-color 300ms;
     @include box-shadow();
 
-    &:hover {
-      cursor: pointer;
-      background-color: darken($color1, 20);
+    &--submit {
+      background: $color1;
+
+      &:hover {
+        cursor: pointer;
+        background-color: darken($color1, 20);
+      }
+
+      &:focus {
+        background-color: darken($color1, 20);
+      }
     }
 
-    &:focus {
-      background-color: darken($color1, 20);
+    &--cancel {
+      background: #666;
+
+      &:hover {
+        cursor: pointer;
+        background-color: darken($color2, 10);
+      }
+
+      &:focus {
+        background-color: darken($color2, 20);
+      }
     }
   }
 }
