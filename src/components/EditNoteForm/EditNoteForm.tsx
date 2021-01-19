@@ -27,11 +27,11 @@ const EditNoteForm: React.FC<Props> = ({ match }) => {
     dispatch(
       updateNote({ id: note!.id, title, timestamp: Date.now() / 1000, text })
     );
-    history.push('/');
+    history.push(`/notes/${noteId}`);
   };
 
   const handleCancel = (e: MouseEvent<HTMLButtonElement>) => {
-    history.push(`/notes/${noteId}`);
+    history.goBack();
   };
 
   useEffect(() => {
