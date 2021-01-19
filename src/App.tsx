@@ -3,6 +3,7 @@ import Header from './components/Header/Header';
 import NewNoteBtn from './components/NewNoteBtn/NewNoteBtn';
 import NewNoteForm from './components/NewNoteForm/NewNoteForm';
 import NotesList from './components/NotesList/NoteList';
+import ViewNote from './components/ViewNote/ViewNote';
 
 const App: React.FC = () => {
   return (
@@ -15,9 +16,8 @@ const App: React.FC = () => {
               <NotesList />
               <NewNoteBtn />
             </Route>
-            <Route exact path='/new-note'>
-              <NewNoteForm />
-            </Route>
+            <Route exact path='/new-note' component={NewNoteForm} />
+            <Route exact path='/notes/:id' component={ViewNote} />
           </Switch>
         </div>
       </main>
