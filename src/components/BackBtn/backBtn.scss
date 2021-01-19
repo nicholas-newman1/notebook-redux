@@ -1,13 +1,15 @@
 @use '../../scss/config.scss' as *;
 
-.edit-note-btn {
+.back-btn {
   position: fixed;
-  right: 5%;
+  border: none;
+  outline: none;
+  left: 5%;
   bottom: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: $color1;
+  background: $color2;
   width: 4rem;
   height: 4rem;
   border-radius: 100%;
@@ -15,6 +17,7 @@
   @include box-shadow();
 
   &:hover {
+    cursor: pointer;
     transform: scale(1.1);
   }
 }

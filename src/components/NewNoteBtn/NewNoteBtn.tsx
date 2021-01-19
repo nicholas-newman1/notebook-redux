@@ -5,7 +5,7 @@ import './newNoteBtn.scss';
 const NewNoteBtn: React.FC = () => {
   return (
     <Link to='/new-note' className='new-note-btn'>
-      <img className='new-note-btn__svg' src={plusSVG} alt='menu icon' />
+      <img className='new-note-btn__img' src={plusSVG} alt='new note' />
     </Link>
   );
 };

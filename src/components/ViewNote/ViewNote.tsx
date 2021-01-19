@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { RouteComponentProps } from 'react-router-dom';
 import { AppState } from '../../reducers';
+import BackBtn from '../BackBtn/BackBtn';
 import EditNoteBtn from '../EditNoteBtn/EditNoteBtn';
 import './viewNote.scss';
 
@@ -17,11 +18,14 @@ const ViewNote: React.FC<Props> = ({ match }) => {
   return note ? (
     <div className='view-note'>
       <h1 className='view-note__title'>{note.title}</h1>
+
       {note.text.split('\n').map((p, i) => (
         <p key={i} className='view-note__p'>
           {p}
         </p>
       ))}
+
+      <BackBtn />
       <EditNoteBtn id={noteId} />
     </div>
   ) : (
