@@ -1,0 +1,20 @@
+@use '../../scss/config.scss' as *;
+
+.edit-note-btn {
+  position: fixed;
+  right: 5%;
+  bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $color1;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  transition: transform 300ms;
+  @include box-shadow();
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
