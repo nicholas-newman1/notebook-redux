@@ -1,9 +1,11 @@
 @use '../../scss/config.scss' as *;
 
 .new-note-form {
-  width: 100%;
   display: grid;
+  grid-template-rows: 4rem auto 2rem;
   gap: 1rem;
+  padding: 1rem 0;
+  min-height: calc(100vh - #{$headerHeight});
 
   &__input {
     border: none;
@@ -19,14 +21,14 @@
   }
 
   &__input--text {
-    resize: vertical;
-    min-height: 20rem;
+    resize: none;
     font-size: 1rem;
   }
 
   &__btns {
     justify-self: center;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
 

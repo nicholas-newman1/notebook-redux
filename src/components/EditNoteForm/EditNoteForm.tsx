@@ -27,7 +27,7 @@ const EditNoteForm: React.FC<Props> = ({ match }) => {
     dispatch(
       updateNote({ id: note!.id, title, timestamp: Date.now() / 1000, text })
     );
-    history.push(`/notes/${noteId}`);
+    history.goBack();
   };
 
   const handleCancel = (e: MouseEvent<HTMLButtonElement>) => {

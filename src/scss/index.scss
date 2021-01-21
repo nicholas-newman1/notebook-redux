@@ -1,3 +1,4 @@
+@use './config.scss' as *;
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 *,
@@ -12,10 +13,6 @@
 html {
   min-height: 100vh;
   background: #f4f4f4;
-}
-
-.main {
-  padding: 1rem 0;
 }
 
 .container {
