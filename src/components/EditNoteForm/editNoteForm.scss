@@ -1,7 +1,6 @@
 @use '../../scss/config.scss' as *;
 
 .edit-note-form {
-  width: 100%;
   display: grid;
   grid-template-rows: 4rem auto 2rem;
   gap: 1rem;
@@ -13,6 +12,7 @@
     padding: 1rem;
     outline: none;
     border-radius: 15px;
+    width: 100%;
     @include box-shadow();
   }
 
